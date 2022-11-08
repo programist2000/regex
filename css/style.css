@@ -33,18 +33,17 @@
     min-height: 400px;
 }
 
-#inp {
+.input-block textarea {
     width: 100%;
-    height: 100%;
+    height: 50%;
     resize: none;
     background-color: #60BDCE;
     margin: 0px;
     padding: 0px;
 }
 
-#inp:focus {
+.input-block textarea {
     outline: none;
-    border: 3px solid #206876;
 }
 
 body {
