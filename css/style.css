@@ -1,3 +1,8 @@
+
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
 .container {
     width: 90%;
     margin: auto;
@@ -27,6 +32,8 @@
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
     backdrop-filter: blur(3.5px);
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    font-size: 1.3rem;
+    color: #263d5a;
 }
 
 .result-block .result-row textarea {
@@ -48,6 +55,8 @@
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
     backdrop-filter: blur(3.5px);
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    font-size: 1.3rem;
+    color: #263d5a;
 }
 
 .input-block textarea {
@@ -59,6 +68,6 @@ body {
     background-image: url(../assets/images/background5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height:100vh
+    min-height:100vh;
 }
 
