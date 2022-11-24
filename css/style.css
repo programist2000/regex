@@ -22,7 +22,11 @@
     resize: none;
     background-color: #60BDCE;
     margin: 0px;
-    padding: 0px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
 }
 
 .result-block .result-row textarea {
@@ -39,7 +43,11 @@
     resize: none;
     background-color: #60BDCE;
     margin: 0px;
-    padding: 0px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
 }
 
 .input-block textarea {
@@ -47,5 +55,10 @@
 }
 
 body {
-    background-color: #04859D;
+    
+    background-image: url(../assets/images/background5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh
 }
+
