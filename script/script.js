@@ -40,4 +40,3 @@ document.getElementById("inp2").addEventListener("keyup", function(){
     }
 });
 
-//console.log(d)

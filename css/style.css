@@ -1,74 +1,48 @@
 
 body {
     font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.4rem;
+    background-image: url(../assets/images/background5.jpg);
+    background-repeat: no-repeat repeat-y;
+    background-size: cover;
+    min-height:100vh;
 }
 
 .container {
-    width: 90%;
-    margin: auto;
-    padding-top: 20px;
+    display: flex;
+    padding: 20px 0 20px 0; 
 }
 
-.input-block, .result-block {
-    display:inline-block;
-    width: 40%;
-    height: 800px;
-    padding: 10px;
-    vertical-align: bottom;
+.container div {
+    flex: 1;
+}
+
+.container .inner-block-style {
+    display: flex;
+    flex-direction: column;
 }
 
 .result-row {
-    display:block;  
+    /* display:block;   */
     white-space: normal;
 }
 
-
-.result-block textarea {
+.container textarea {
     width: 100%;
     resize: none;
     background-color: #60BDCE;
-    margin: 0px;
     padding: 20px;
     border-radius: 20px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
     backdrop-filter: blur(3.5px);
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
-    font-size: 1.3rem;
     color: #263d5a;
-}
-
-.result-block .result-row textarea {
-    min-height: 100px;
-}
-
-.result-block .result-col textarea {
-    min-height: 400px;
-}
-
-.input-block textarea {
-    width: 100%;
-    height: 50%;
-    resize: none;
-    background-color: #60BDCE;
-    margin: 0px;
-    padding: 20px;
-    border-radius: 20px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
-    backdrop-filter: blur(3.5px);
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
-    font-size: 1.3rem;
-    color: #263d5a;
+    min-height: 300px;
 }
 
 .input-block textarea {
     outline: none;
 }
 
-body {
-    
-    background-image: url(../assets/images/background5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height:100vh;
-}
+
 
