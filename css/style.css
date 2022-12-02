@@ -10,7 +10,11 @@ body {
 
 .container {
     display: flex;
-    padding: 20px 0 20px 0; 
+    padding: 40px 0 40px 0; 
+}
+
+.container .mrgn-tp {
+    margin-top:20px;
 }
 
 .container div {
@@ -23,7 +27,6 @@ body {
 }
 
 .result-row {
-    /* display:block;   */
     white-space: normal;
 }
 
