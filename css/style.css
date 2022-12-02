@@ -31,7 +31,9 @@ body {
 }
 
 .container textarea {
-    width: 100%;
+    min-height: 300px; 
+    width: 90%;
+    /* overflow:hidden; */
     resize: none;
     background-color: #60BDCE;
     padding: 20px;
@@ -40,7 +42,6 @@ body {
     backdrop-filter: blur(3.5px);
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
     color: #263d5a;
-    min-height: 300px;
 }
 
 .input-block textarea {
