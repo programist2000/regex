@@ -2,6 +2,7 @@ let d
 let dTwo
 let result
 let resultTwo
+let Copy
 
 function clearinfo() {
     document.getElementById('result-row').innerHTML = "";
@@ -38,5 +39,26 @@ document.getElementById("inp2").addEventListener("keyup", function(){
     } else {
         clearinfo()
     }
+
+    
+ 
 });
 
+let ButtonCopy = document.getElementById("Copy");
+ButtonCopy.addEventListener("click", CopyTextArea);
+function CopyTextArea (){
+let area = document.createElement('textarea'); /* Создали */
+    area.value = document.getElementById('result-row').innerHTML; /* Вставили текст */
+    document.body.appendChild(area).select(); /* Добавили на страницу и выделили */
+    document.execCommand('copy'); /* Скопировали */
+    area.remove(); /* Удалили */}
+
+let ButtonCopyStolb = document.getElementById("Copy_Stolb");
+ButtonCopyStolb.addEventListener("click", CopyTextAreaStolb);
+function CopyTextAreaStolb() {
+    let area = document.createElement('textarea'); /* Создали */
+    area.value = document.getElementById('result-col').innerHTML; /* Вставили текст */
+    document.body.appendChild(area).select(); /* Добавили на страницу и выделили */
+    document.execCommand('copy'); /* Скопировали */
+    area.remove(); /* Удалили */
+}
