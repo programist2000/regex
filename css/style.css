@@ -40,7 +40,24 @@ body {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
     backdrop-filter: blur(3.5px);
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
-    color: #263d5a;
+    color: #263d5a; 
+    cursor: auto;
+}
+
+::-webkit-scrollbar {
+    width: 16px; /* ширина для вертикального скролла */
+    background-color: #b7c2cf;
+    cursor:pointer;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #536081;
+    box-shadow: inset 1px 1px 5px #d2d6dd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #384055;
 }
 
 .input-block textarea {

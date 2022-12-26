@@ -19,14 +19,6 @@ function clearInputTwo() {
     clearinfo();
 }
 
-document.getElementById("clear_input_one").addEventListener("click", function(){
-    clearInputOne();
-});
-
-document.getElementById("clear_input_two").addEventListener("click", function(){
-    clearInputTwo();
-});
-
 document.getElementById("inp").addEventListener("keyup", function(){
     
     d = document.getElementById("inp").value 
@@ -44,8 +36,6 @@ document.getElementById("inp").addEventListener("keyup", function(){
     } else {
         clearinfo()
     }
-
-
 });
 
 document.getElementById("inp2").addEventListener("keyup", function(){
@@ -59,7 +49,14 @@ document.getElementById("inp2").addEventListener("keyup", function(){
     } else {
         clearinfo()
     }    
- 
+});
+
+document.getElementById("clear_input_one").addEventListener("click", function(){
+    clearInputOne();
+});
+
+document.getElementById("clear_input_two").addEventListener("click", function(){
+    clearInputTwo();
 });
 
 let ButtonCopy = document.getElementById("Copy");
