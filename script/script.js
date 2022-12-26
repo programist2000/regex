@@ -9,6 +9,24 @@ function clearinfo() {
     document.getElementById('result-col').innerHTML = "";
 }
 
+function clearInputOne() {
+    document.getElementById('inp').value = '';
+    clearinfo();
+}
+
+function clearInputTwo() {
+    document.getElementById('inp2').value = '';
+    clearinfo();
+}
+
+document.getElementById("clear_input_one").addEventListener("click", function(){
+    clearInputOne();
+});
+
+document.getElementById("clear_input_two").addEventListener("click", function(){
+    clearInputTwo();
+});
+
 document.getElementById("inp").addEventListener("keyup", function(){
     
     d = document.getElementById("inp").value 
@@ -31,16 +49,16 @@ document.getElementById("inp").addEventListener("keyup", function(){
 });
 
 document.getElementById("inp2").addEventListener("keyup", function(){
+
     dTwo = document.getElementById("inp2").value
+
     if (dTwo != 0) {
         resultTwo = dTwo.match(/\d+/gmi);
         document.getElementById('result-row').innerHTML = resultTwo.join(' ')
         document.getElementById('result-col').innerHTML = resultTwo.join('\n')      
     } else {
         clearinfo()
-    }
-
-    
+    }    
  
 });
 
