@@ -11,10 +11,12 @@ function clearinfo() {
 
 function clearInputOne() {
     document.getElementById('inp').value = '';
+    document.getElementById('inp2').value = '';
     clearinfo();
 }
 
 function clearInputTwo() {
+    document.getElementById('inp').value = '';
     document.getElementById('inp2').value = '';
     clearinfo();
 }
