@@ -109,39 +109,39 @@ function CopyTextAreaStolb() {
 // buttonOpenUTM.addEventListener("click", openUTM);
 
 
-function parseWebsite(url) {
-    fetch(url)
-      .then(response => response.text())
-      .then(html => {
-        // Создаем временный элемент div, чтобы разместить HTML-код
-        const tempDiv = document.createElement("div");
-        tempDiv.innerHTML = html;
+// function parseWebsite(url) {
+//     fetch(url)
+//       .then(response => response.text())
+//       .then(html => {
+//         // Создаем временный элемент div, чтобы разместить HTML-код
+//         const tempDiv = document.createElement("div");
+//         tempDiv.innerHTML = html;
   
-        // Находим все таблицы на странице
-        const tables = tempDiv.querySelectorAll("table");
+//         // Находим все таблицы на странице
+//         const tables = tempDiv.querySelectorAll("table");
   
-        // Проходимся по каждой таблице
-        for (let i = 0; i < tables.length; i++) {
-          const table = tables[i];
+//         // Проходимся по каждой таблице
+//         for (let i = 0; i < tables.length; i++) {
+//           const table = tables[i];
   
-          // Находим все строки таблицы
-          const rows = table.querySelectorAll("tr");
+//           // Находим все строки таблицы
+//           const rows = table.querySelectorAll("tr");
   
-          // Проходимся по каждой строке
-          for (let j = 0; j < rows.length; j++) {
-            const row = rows[j];
+//           // Проходимся по каждой строке
+//           for (let j = 0; j < rows.length; j++) {
+//             const row = rows[j];
   
-            // Получаем последнюю ячейку строки
-            const cells = row.cells;
-            const lastCell = cells[cells.length - 1];
+//             // Получаем последнюю ячейку строки
+//             const cells = row.cells;
+//             const lastCell = cells[cells.length - 1];
   
-            // Извлекаем содержимое последней ячейки
-            const content = lastCell.textContent;
-            console.log(content);
-          }
-        }
-      });
-  }
+//             // Извлекаем содержимое последней ячейки
+//             const content = lastCell.textContent;
+//             console.log(content);
+//           }
+//         }
+//       });
+//   }
 
 
-  parseWebsite("http://sps-holding.ru/addrbook/?p=-2");
+//   parseWebsite("http://sps-holding.ru/addrbook/?p=-2");
