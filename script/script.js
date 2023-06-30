@@ -146,32 +146,32 @@ function CopyTextAreaStolb() {
 
 //   parseWebsite("http://sps-holding.ru/addrbook/?p=-2");
 
-// Адрес страницы с таблицей
-const url = "http://sps-holding.ru/addrbook/?p=-2";
+// // Адрес страницы с таблицей
+// const url = "http://sps-holding.ru/addrbook/?p=-2";
 
-// Получаем HTML-код страницы с таблицей
-fetch(url)
-  .then(response => response.text())
-  .then(html => {
-    // Создаем временный элемент div
-    const temp = document.createElement("div");
-    temp.innerHTML = html;
+// // Получаем HTML-код страницы с таблицей
+// fetch(url)
+//   .then(response => response.text())
+//   .then(html => {
+//     // Создаем временный элемент div
+//     const temp = document.createElement("div");
+//     temp.innerHTML = html;
 
-    // Находим таблицу на странице
-    const table = temp.querySelector("table");
+//     // Находим таблицу на странице
+//     const table = temp.querySelector("table");
 
-    // Получаем список строк таблицы
-    const rows = table.querySelectorAll("tr");
+//     // Получаем список строк таблицы
+//     const rows = table.querySelectorAll("tr");
 
-    // Проходим циклом по строкам таблицы
-    rows.forEach(row => {
-      // Получаем список ячеек в текущей строке
-      const cells = row.querySelectorAll("td");
+//     // Проходим циклом по строкам таблицы
+//     rows.forEach(row => {
+//       // Получаем список ячеек в текущей строке
+//       const cells = row.querySelectorAll("td");
 
-      // Выводим содержимое ячеек
-      cells.forEach(cell => {
-        console.log(cell.innerText);
-      });
-    });
-  })
-  .catch(error => console.log(error));
+//       // Выводим содержимое ячеек
+//       cells.forEach(cell => {
+//         console.log(cell.innerText);
+//       });
+//     });
+//   })
+//   .catch(error => console.log(error));
