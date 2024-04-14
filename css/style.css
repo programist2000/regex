@@ -2,7 +2,7 @@
 body {
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 1.4rem;
-    background: url(https://4kwallpaper.wiki/wp-content/uploads/2019/07/391642.jpg);
+    background: url(../assets/images/background.png);
     background-size: cover;
     min-height:100vh;
 }
