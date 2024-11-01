@@ -65,7 +65,7 @@ let ButtonCopy = document.getElementById("Copy");
 ButtonCopy.addEventListener("click", CopyTextArea);
 function CopyTextArea (){
 let area = document.createElement('textarea'); /* Создали */
-    area.value = document.getElementById('result-row').innerHTML; /* Вставили текст */
+    area.value = document.getElementById('result-row').value; /* Вставили текст */
     document.body.appendChild(area).select(); /* Добавили на страницу и выделили */
     document.execCommand('copy'); /* Скопировали */
     area.remove(); /* Удалили */}
@@ -74,104 +74,8 @@ let ButtonCopyStolb = document.getElementById("Copy_Stolb");
 ButtonCopyStolb.addEventListener("click", CopyTextAreaStolb);
 function CopyTextAreaStolb() {
     let area = document.createElement('textarea'); /* Создали */
-    area.value = document.getElementById('result-col').innerHTML; /* Вставили текст */
+    area.value = document.getElementById('result-col').value; /* Вставили текст */
     document.body.appendChild(area).select(); /* Добавили на страницу и выделили */
     document.execCommand('copy'); /* Скопировали */
     area.remove(); /* Удалили */
 }
-
-
-// Открытие УТМ
-
-// let buttonOpenUTM = document.getElementById("openUTM");
-
-// function openUTM (){
-//     let resultRow = document.getElementById('result-row').value;
-//     let shopsArr = resultRow.split(' ');
-
-//     shopsArr.forEach(item => {
-//         console.log(item)
-//     });
-
-//     shopsArr.forEach(element => {
-//         if (element <=255) {
-//             window.open(`192.168.${element}.2:8080`);
-//         }
-//         if (element <=19999) {
-//             window.open(`192.168.${element}.2:8080`);
-//         }
-//     });
-
-
-//     console.log(shopsArr)
-// }
-
-// buttonOpenUTM.addEventListener("click", openUTM);
-
-
-// function parseWebsite(url) {
-//     fetch(url)
-//       .then(response => response.text())
-//       .then(html => {
-//         // Создаем временный элемент div, чтобы разместить HTML-код
-//         const tempDiv = document.createElement("div");
-//         tempDiv.innerHTML = html;
-  
-//         // Находим все таблицы на странице
-//         const tables = tempDiv.querySelectorAll("table");
-  
-//         // Проходимся по каждой таблице
-//         for (let i = 0; i < tables.length; i++) {
-//           const table = tables[i];
-  
-//           // Находим все строки таблицы
-//           const rows = table.querySelectorAll("tr");
-  
-//           // Проходимся по каждой строке
-//           for (let j = 0; j < rows.length; j++) {
-//             const row = rows[j];
-  
-//             // Получаем последнюю ячейку строки
-//             const cells = row.cells;
-//             const lastCell = cells[cells.length - 1];
-  
-//             // Извлекаем содержимое последней ячейки
-//             const content = lastCell.textContent;
-//             console.log(content);
-//           }
-//         }
-//       });
-//   }
-
-
-//   parseWebsite("http://sps-holding.ru/addrbook/?p=-2");
-
-// // Адрес страницы с таблицей
-// const url = "http://sps-holding.ru/addrbook/?p=-2";
-
-// // Получаем HTML-код страницы с таблицей
-// fetch(url)
-//   .then(response => response.text())
-//   .then(html => {
-//     // Создаем временный элемент div
-//     const temp = document.createElement("div");
-//     temp.innerHTML = html;
-
-//     // Находим таблицу на странице
-//     const table = temp.querySelector("table");
-
-//     // Получаем список строк таблицы
-//     const rows = table.querySelectorAll("tr");
-
-//     // Проходим циклом по строкам таблицы
-//     rows.forEach(row => {
-//       // Получаем список ячеек в текущей строке
-//       const cells = row.querySelectorAll("td");
-
-//       // Выводим содержимое ячеек
-//       cells.forEach(cell => {
-//         console.log(cell.innerText);
-//       });
-//     });
-//   })
-//   .catch(error => console.log(error));
