@@ -15,11 +15,29 @@
         if (saved !== null) field.value = saved;
     }
 
+    function clearSavedFields(ids) {
+        ids.forEach(id => {
+            const key = 'autosave_' + id;
+            localStorage.removeItem(key);
+        });
+    }
+
     function setupAutosave() {
         const fields = document.querySelectorAll('input[type="text"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea');
         fields.forEach(field => {
             restoreFieldValue(field);
             field.addEventListener('input', () => saveFieldValue(field));
+        });
+
+        // Добавляем обработчики для кнопок очистки
+        const clearIds = ['clear_input_one', 'clear_input_two'];
+        clearIds.forEach(btnId => {
+            const btn = document.getElementById(btnId);
+            if (btn) {
+                btn.addEventListener('click', function () {
+                    clearSavedFields(['inp', 'inp2']);
+                });
+            }
         });
     }
 
