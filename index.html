@@ -62,12 +62,24 @@
         </div>
     </div>
 
+    <div id="patchnote-modal"
+        style="display:none; position:fixed; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+        <div
+            style="background:#fff; padding:20px; max-width:90vw; max-height:80vh; overflow:auto; border-radius:8px; position:relative;">
+            <button id="close-patchnote" style="position:absolute; top:10px; right:10px;">Закрыть</button>
+            <pre id="patchnote-content" style="white-space:pre-wrap;"></pre>
+        </div>
+    </div>
+    <button id="show_patchnote"
+        style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); z-index:999; background:#222; color:#fff; border:none; border-radius:6px; padding:10px 20px; font-size:16px; cursor:pointer;">Патчноут</button>
+
 
 
 
 
     <script src="./script/script.js"></script>
     <script src="./script/form-autosave.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 
 </html>
