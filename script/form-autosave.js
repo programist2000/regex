@@ -1,0 +1,31 @@
+// form-autosave.js
+(function () {
+    // Сохраняем значения всех input и textarea
+    function saveFieldValue(field) {
+        if (!field.name && !field.id) return; // нужен уникальный идентификатор
+        const key = 'autosave_' + (field.id || field.name);
+        localStorage.setItem(key, field.value);
+    }
+
+    // Восстанавливаем значения
+    function restoreFieldValue(field) {
+        if (!field.name && !field.id) return;
+        const key = 'autosave_' + (field.id || field.name);
+        const saved = localStorage.getItem(key);
+        if (saved !== null) field.value = saved;
+    }
+
+    function setupAutosave() {
+        const fields = document.querySelectorAll('input[type="text"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea');
+        fields.forEach(field => {
+            restoreFieldValue(field);
+            field.addEventListener('input', () => saveFieldValue(field));
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupAutosave);
+    } else {
+        setupAutosave();
+    }
+})(); 
