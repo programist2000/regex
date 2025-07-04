@@ -91,25 +91,31 @@ function CopyTextAreaStolb() {
 }
 
 // Показ патчноута
-const patchnoteBtn = document.getElementById('show_patchnote');
-const patchnoteModal = document.getElementById('patchnote-modal');
-const patchnoteContent = document.getElementById('patchnote-content');
-const patchnoteClose = document.getElementById('close-patchnote');
 
-if (patchnoteBtn && patchnoteModal && patchnoteContent && patchnoteClose) {
-    patchnoteBtn.addEventListener('click', function () {
-        fetch('CHANGELOG.md')
-            .then(r => r.text())
-            .then(text => {
-                // Рендерим markdown в HTML
-                patchnoteContent.innerHTML = marked.parse(text);
-                patchnoteModal.style.display = 'flex';
-            });
-    });
-    patchnoteClose.addEventListener('click', function () {
-        patchnoteModal.style.display = 'none';
-    });
-    patchnoteModal.addEventListener('click', function (e) {
-        if (e.target === patchnoteModal) patchnoteModal.style.display = 'none';
-    });
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const patchnoteBtn = document.getElementById('show_patchnote');
+    const patchnoteModal = document.getElementById('patchnote-modal');
+    const patchnoteContent = document.getElementById('patchnote-content');
+    const patchnoteClose = document.getElementById('close-patchnote');
+
+    if (patchnoteBtn && patchnoteModal && patchnoteContent && patchnoteClose) {
+        patchnoteBtn.addEventListener('click', function () {
+            fetch('CHANGELOG.md')
+                .then(r => r.text())
+                .then(text => {
+                    if (window.marked) {
+                        patchnoteContent.innerHTML = marked.parse(text);
+                    } else {
+                        patchnoteContent.textContent = text;
+                    }
+                    patchnoteModal.style.display = 'flex';
+                });
+        });
+        patchnoteClose.addEventListener('click', function () {
+            patchnoteModal.style.display = 'none';
+        });
+        patchnoteModal.addEventListener('click', function (e) {
+            if (e.target === patchnoteModal) patchnoteModal.style.display = 'none';
+        });
+    }
+});
